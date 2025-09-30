@@ -1,0 +1,25 @@
+{
+  "name": "central-blockchain-nodejs",
+  "version": "1.0.0",
+  "description": "A simple centralized blockchain server with Block structure and basic PoW.",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "NODE_ENV=development node index.js"
+  },
+  "keywords": [
+    "blockchain",
+    "centralized",
+    "pow",
+    "nodejs",
+    "express"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0"
+  }
+}

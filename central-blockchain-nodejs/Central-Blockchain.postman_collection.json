@@ -1,0 +1,174 @@
+{
+  "info": {
+    "name": "Central Blockchain API",
+    "_postman_id": "central-blockchain-2025-09-30T13:56:42.447617",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/health",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "api",
+            "health"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Chain",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/blocks",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "api",
+            "blocks"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Explorer",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/explorer",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "api",
+            "explorer"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Block by Index",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/blocks/1",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "api",
+            "blocks",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Set Block (default difficulty)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"data\": {\"msg\": \"hello blockchain\"}}"
+        }
+      },
+      "url": {
+        "raw": "http://localhost:3000/api/blocks",
+        "host": [
+          "http://localhost:3000"
+        ],
+        "path": [
+          "api",
+          "blocks"
+        ]
+      }
+    },
+    {
+      "name": "Mine Block (custom difficulty)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"data\": \"harder block\", \"difficulty\": 4}"
+        }
+      },
+      "url": {
+        "raw": "http://localhost:3000/api/mine",
+        "host": [
+          "http://localhost:3000"
+        ],
+        "path": [
+          "api",
+          "mine"
+        ]
+      }
+    },
+    {
+      "name": "Reset Chain",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/reset",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "api",
+            "reset"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Set Default Difficulty",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"difficulty\": 3}"
+        }
+      },
+      "url": {
+        "raw": "http://localhost:3000/api/config/difficulty",
+        "host": [
+          "http://localhost:3000"
+        ],
+        "path": [
+          "api",
+          "config",
+          "difficulty"
+        ]
+      }
+    }
+  ]
+}
