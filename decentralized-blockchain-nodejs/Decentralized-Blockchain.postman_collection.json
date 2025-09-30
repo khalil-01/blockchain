@@ -1,0 +1,129 @@
+{
+  "info": {
+    "name": "Decentralized Blockchain API",
+    "_postman_id": "decentralized-blockchain-2025-09-30T14:05:01.673471",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4001/api/health",
+          "host": [
+            "http://localhost:4001"
+          ],
+          "path": [
+            "api",
+            "health"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Chain",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4001/api/blocks",
+          "host": [
+            "http://localhost:4001"
+          ],
+          "path": [
+            "api",
+            "blocks"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Explorer",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4001/api/explorer",
+          "host": [
+            "http://localhost:4001"
+          ],
+          "path": [
+            "api",
+            "explorer"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Mine Block",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"data\": {\"msg\": \"hello from 4001\"}, \"difficulty\": 3}"
+        },
+        "url": {
+          "raw": "http://localhost:4001/api/mine",
+          "host": [
+            "http://localhost:4001"
+          ],
+          "path": [
+            "api",
+            "mine"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Add Peers",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"peers\": [\"http://localhost:4002\"]}"
+        },
+        "url": {
+          "raw": "http://localhost:4001/api/peers",
+          "host": [
+            "http://localhost:4001"
+          ],
+          "path": [
+            "api",
+            "peers"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Resolve",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:4001/api/resolve",
+          "host": [
+            "http://localhost:4001"
+          ],
+          "path": [
+            "api",
+            "resolve"
+          ]
+        }
+      }
+    }
+  ]
+}
